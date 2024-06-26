@@ -8,6 +8,7 @@ import { Gallery } from '../components/Gallery/Gallery';
 import { Contact } from '../components/Contact/contact';
 import { Footer } from '../components/Footer/footer';
 
+
 document.querySelector('#root').innerHTML = render(
   <div className="page">
     <Header />
@@ -20,3 +21,19 @@ document.querySelector('#root').innerHTML = render(
     <Footer />
   </div>
 );
+
+const hamburger = document.querySelector('.nav-btn');
+const menuPolozky = document.querySelector('.rollout-nav');
+
+const closeNav = () => {
+  menuPolozky.classList.add('nav-closed');
+};
+
+hamburger.addEventListener('click', () => { 
+  menuPolozky.classList.toggle('nav-closed');});
+
+menuPolozky.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') {
+    closeNav();
+  }
+});
