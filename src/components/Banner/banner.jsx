@@ -1,4 +1,4 @@
-import './banner.css'
+import './banner.css';
 
 export const Banner = () => (
     <section id = 'home' className="banner">
