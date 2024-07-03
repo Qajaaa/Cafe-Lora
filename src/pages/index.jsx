@@ -1,6 +1,5 @@
 import { render } from '@czechitas/render';
 import '../global.css';
-import './index.css';
 import { Header } from '../components/Header/Header';
 import { Banner } from '../components/Banner/banner';
 import { Menu } from '../components/Menu/menu';
@@ -8,11 +7,9 @@ import { Gallery } from '../components/Gallery/Gallery';
 import { Contact } from '../components/Contact/contact';
 import { Footer } from '../components/Footer/footer';
 
-
-  const response = await fetch('http://localhost:4000/api/drinks');
-  const json = await response.json();
-  const drinks = json.data;
-
+const response = await fetch('http://localhost:4000/api/drinks');
+const json = await response.json();
+const drinks = json.data;
 
 
 document.querySelector('#root').innerHTML = render(
